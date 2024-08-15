@@ -1,5 +1,7 @@
 # 電信零售商員工入口網站
 
+完整SA文件(https://docs.google.com/document/d/1dYly8zkXl1qb7QPL6QFmROcGjKquX36cybS4kJ7Wdmo/edit?usp=sharing)
+
 本專案為代理 AT&T 電信銷售的零售商員工入口網站。該系統旨在自動化和優化多項業務流程，提供有效的數據整合、佣金計算、人事管理以及裝置退貨追蹤功能。
 
 ## 目錄
