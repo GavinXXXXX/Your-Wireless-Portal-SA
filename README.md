@@ -74,18 +74,18 @@
 - Storage: 500GB SSD 或以上
 
 ## 安裝與設定
-### 1. 克隆此專案
+### 1. 複製此專案
 ```bash
 git clone https://github.com/YourOrganization/telecom-retail-portal.git
 ```
 
-### 2. 安裝前端依賴
+### 2. 安裝前端相依套件
 ```bash
 cd frontend
 npm install
 ```
 
-### 3. 安裝後端依賴
+### 3. 安裝後端相依套件
 ```bash
 cd backend
 npm install
@@ -141,3 +141,8 @@ npm run test
 - CPU: Intel i7 或同等級以上
 - RAM: 16GB 或以上
 - Storage: 500GB SSD 或以上
+
+
+
+
+**以上為ChatGPT依據SA文件協助產生**
