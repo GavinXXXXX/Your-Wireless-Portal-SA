@@ -2,6 +2,8 @@
 
 [完整SA文件](https://docs.google.com/document/d/1dYly8zkXl1qb7QPL6QFmROcGjKquX36cybS4kJ7Wdmo/edit?usp=sharing)
 
+# 電信零售商員工入口網站
+
 本專案為代理 AT&T 電信銷售的零售商員工入口網站。該系統旨在自動化和優化多項業務流程，提供有效的數據整合、佣金計算、人事管理以及裝置退貨追蹤功能。
 
 ## 目錄
@@ -9,7 +11,11 @@
 2. [技術架構](#技術架構)
 3. [功能特性](#功能特性)
 4. [系統需求](#系統需求)
-
+5. [安裝與設定](#安裝與設定)
+6. [測試與部署](#測試與部署)
+7. [預期挑戰與解決方案](#預期挑戰與解決方案)
+8. [備份需求](#備份需求)
+9. [使用者介面需求](#使用者介面需求)
 
 ## 專案概述
 該系統涵蓋以下主要功能：
@@ -59,6 +65,75 @@
 - Node.js v14+
 - MySQL 5.7+
 - Python 3.x
+- Docker 19.03+
+- Kubernetes 1.18+
+  
+### 硬體需求
+- CPU: Intel i7 或同等級以上
+- RAM: 16GB 或以上
+- Storage: 500GB SSD 或以上
+
+## 安裝與設定
+### 1. 克隆此專案
+```bash
+git clone https://github.com/YourOrganization/telecom-retail-portal.git
+```
+
+### 2. 安裝前端依賴
+```bash
+cd frontend
+npm install
+```
+
+### 3. 安裝後端依賴
+```bash
+cd backend
+npm install
+```
+
+### 4. 設定環境變數
+創建 `.env` 檔案並填入以下環境變數：
+```
+DB_HOST=<MySQL主機地址>
+DB_USER=<資料庫用戶名>
+DB_PASS=<資料庫密碼>
+MS365_CLIENT_ID=<Microsoft 365 OAuth Client ID>
+MS365_CLIENT_SECRET=<Microsoft 365 OAuth Client Secret>
+```
+
+### 5. 啟動服務
+```bash
+docker-compose up -d
+```
+
+## 測試與部署
+### 單元測試
+```bash
+npm run test
+```
+
+### 系統部署
+1. 使用 Kubernetes 部署容器。
+2. 配置負載均衡和持續集成工具（CI/CD）。
+
+## 預期挑戰與解決方案
+### 1. 多來源數據整合
+- **挑戰**: 來自 AT&T 和 POS 系統的數據格式不一致。
+- **解決方案**: 使用 ETL 工具自動化數據轉換和匯入。
+
+### 2. 高併發訪問
+- **挑戰**: 多用戶同時操作導致系統效能降低。
+- **解決方案**: 採用微服務架構和負載均衡技術提升系統效能。
+
+## 備份需求
+- **資料庫備份**: 每日完整備份，並每小時執行增量備份。
+- **應用程式與設定檔備份**: 每週進行一次全面備份。
+
+## 使用者介面需求
+- 支持英文與西班牙文的多語言切換。
+- 提供響應式設計，確保在各種裝置上顯示良好。
+- 語言設定放置在個人帳號設置中，使用者可根據偏好進行設定。
+
 - Docker 19.03+
 - Kubernetes 1.18+
   
